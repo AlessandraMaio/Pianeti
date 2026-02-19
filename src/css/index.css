@@ -92,7 +92,7 @@ div.sistema-solare {
   padding: 10px 10px;
   background-color: #a1c181ff;
   display: inline-block;
-  font-size: 15px;
+  font-size: 10px;
   margin: 1%;
 
   /* vertical-align: top; */
@@ -109,7 +109,7 @@ div.sistema-solare {
 }
 
 .pianeta-card__body {
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .pianeta-container {
