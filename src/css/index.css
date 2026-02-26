@@ -3,6 +3,7 @@
 --golden-pollen: #fcca46ff yellow;
 --muted-olive: #a1c181ff verde chiaro;
 --seagrass: #619b8aff verde scuro; */
+
 @import url("https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 * {
@@ -12,7 +13,7 @@
 body {
   margin: 0;
   font-family: "Tinos", serif;
-  background-color: lightgoldenrodyellow;
+  background-color: rgba(250, 247, 210, 0.808);
 }
 
 abbr {
@@ -57,6 +58,7 @@ div#header {
   text-align: center;
   margin: 0;
   font-size: 40px;
+  text-transform: capitalize;
 }
 
 .sistema-solare__title--principale {
@@ -70,7 +72,7 @@ div.sistema-solare {
   background-color: #dbcdc300;
   padding: 20px;
   border: 3px solid #233d4dff;
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
 }
 .sistema-solare__subtitle {
   text-align: left;
@@ -86,48 +88,57 @@ div.sistema-solare {
   list-style-image: url(../../assets/img/icons8-pianeta-18.png);
 }
 
-.pianeta-card {
-  width: calc(33.3333333% - 20px);
-  /* width: 23%; */
+.pianeta-container {
+  margin: 20px 0 0;
+  font-size: 0;
+}
+
+.pianeta-container__card {
+  width: calc(33.333333% - 13.5px);
   border: 2px solid #619b8aff;
-  padding: 10px 10px 10px;
+  padding: 20px 0;
   background-color: #a1c181ff;
   display: inline-block;
-  font-size: 15px;
-  margin: 0.5%;
-
-  /* vertical-align: top; */
+  font-size: 16px;
+  margin: 0 10px 20px;
 }
-.pianeta-card__head {
+
+div.pianeta-container__card:nth-of-type(3n + 1) {
+  margin-left: 0;
+  /* width: calc(33.333333% - 10%); */
+}
+
+div.pianeta-container__card:nth-of-type(3n) {
+  margin-right: 0;
+  /* width: calc(33.333333% - 10%); */
+}
+
+.pianeta-container__head {
   border-bottom: 2px ridge #619b8aff;
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
 
-.pianeta-card h2 {
+.pianeta-container__card h2 {
   text-align: center;
   margin: 0;
 }
 
-.pianeta-card__body {
-  padding: 0 10px;
+.pianeta-container__body {
+  padding: 0 20px;
 }
 
-.pianeta-container {
-  margin: 10px 0;
-  font-size: 0;
-}
-
-.pianeta-card__body p {
+.pianeta-container__card p {
   margin: 0;
 }
 
-.pianeta-card__footer {
+.pianeta-container__footer {
   color: #233d4dff;
   text-align: center;
   border-top: 2px solid #233d4dff;
   padding-top: 20px;
   margin-top: 20px;
+  font-size: 18px;
   cursor: pointer;
 }
 
@@ -143,5 +154,5 @@ div.sistema-solare {
 
 div#footer {
   background-color: #fe7f2d;
-  padding: 50px;
+  /* padding: 50px; */
 }
