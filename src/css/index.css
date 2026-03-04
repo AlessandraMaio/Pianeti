@@ -27,7 +27,7 @@ address {
 
 dt {
   display: inline-block;
-  min-width: 150px;
+  min-width: 9.375rem;
 }
 
 dd {
@@ -36,6 +36,10 @@ dd {
 
 .bold {
   font-weight: bold;
+}
+
+.clearfix {
+  clear: both;
 }
 
 .author {
@@ -48,7 +52,13 @@ div#main {
 }
 
 div#header {
-  background-color: #233d4dff;
+  /* background-color: #233d4dff; */
+  background-image: radial-gradient(
+    circle 120px,
+    #fccb464f,
+    #fcca46ff,
+    #233d4dff
+  );
   border: 3px inset #fcca46ff;
   min-height: 250px;
   line-height: 250px;
@@ -57,7 +67,7 @@ div#header {
 .sistema-solare__title {
   text-align: center;
   margin: 0;
-  font-size: 40px;
+  font-size: 2.5rem;
   text-transform: capitalize;
 }
 
@@ -65,7 +75,7 @@ div#header {
   text-shadow: 2px 2px 2px #fcca46ff;
   color: #fe7f2d;
   word-spacing: 3px;
-  font-size: 60px;
+  font-size: 3.75rem;
   text-transform: uppercase;
 }
 div.sistema-solare {
@@ -80,7 +90,7 @@ div.sistema-solare {
   color: #233d4dff;
 }
 .sistema-solare__body {
-  font-size: 19px;
+  font-size: 1.3rem;
   line-height: 1.15;
 }
 
@@ -90,17 +100,28 @@ div.sistema-solare {
 
 .pianeta-container {
   margin: 20px 0 0;
-  font-size: 0;
+  /* font-size: 0; */
 }
 
 .pianeta-container__card {
-  width: calc(33.333333% - 13.5px);
+  width: calc(33.333333% - 13.333333px);
   border: 2px solid #619b8aff;
-  padding: 20px 0;
   background-color: #a1c181ff;
-  display: inline-block;
-  font-size: 16px;
+  /* display: inline-block; */
+  /* font-size: 1rem; */
+  float: left;
   margin: 0 10px 20px;
+  /* box-shadow: 0 0 5px 3px #619b8aff; */
+}
+
+.pianeta-container__card:hover .pianeta-container__head {
+  background-color: #233d4dff;
+  color: #fe7f2d;
+}
+
+.pianeta-container__card:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px 3px #619b8aff;
 }
 
 div.pianeta-container__card:nth-of-type(3n + 1) {
@@ -115,7 +136,7 @@ div.pianeta-container__card:nth-of-type(3n) {
 
 .pianeta-container__head {
   border-bottom: 2px ridge #619b8aff;
-  padding-bottom: 20px;
+  padding: 20px 0;
   margin-bottom: 20px;
 }
 
@@ -136,10 +157,23 @@ div.pianeta-container__card:nth-of-type(3n) {
   color: #233d4dff;
   text-align: center;
   border-top: 2px solid #233d4dff;
-  padding-top: 20px;
+  padding: 20px 0;
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 1.25rem;
   cursor: pointer;
+}
+
+.pianeta-container__footer span {
+  display: block;
+  width: 75%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.pianeta-container__footer span:hover {
+  background-color: #233d4dff;
+  color: #fe7f2d;
+  border-radius: 999px;
 }
 
 /* .pianeta__card--boundary-left {
@@ -154,5 +188,5 @@ div.pianeta-container__card:nth-of-type(3n) {
 
 div#footer {
   background-color: #fe7f2d;
-  /* padding: 50px; */
+  padding: 20px;
 }
